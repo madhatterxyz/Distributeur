@@ -37,5 +37,9 @@ namespace Distributeur.DAL
             }
             };
         }
+        public Ingredient Get(string name)
+        {
+            return GetAll().FirstOrDefault(x => x.Name == name);
+        }
     }
 }

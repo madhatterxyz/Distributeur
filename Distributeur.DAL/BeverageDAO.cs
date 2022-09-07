@@ -24,8 +24,12 @@ namespace Distributeur.DAL
             },
             new Beverage() {
                 Id = 5,
-                Name = "The"
+                Name = "Thé"
             }};
+        }
+        public Beverage Get(string name)
+        {
+            return GetAll().FirstOrDefault(x => x.Name == name);
         }
     }
 }
