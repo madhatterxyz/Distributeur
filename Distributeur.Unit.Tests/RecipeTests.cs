@@ -35,24 +35,24 @@ namespace Distributeur.Unit.Tests
             var mockRecipeDAO = new Mock<IRecipeDAO>();
             mockRecipeDAO.Setup(x => x.GetAll()).Returns(new List<Recipe>() {
                 //Expresso
-                new Recipe(){ BeverageId =1, Beverage = mockBeverageDAO.Object.Get("Expresso"), Quantity=1,IngredientId=1, Ingredient = mockIngredientDAO.Object.Get("Café")},
-                new Recipe(){ BeverageId =1,Beverage = mockBeverageDAO.Object.Get("Expresso"),Quantity=1,IngredientId=5, Ingredient = mockIngredientDAO.Object.Get("Eau")},
-                //Allongé                              
-                new Recipe(){ BeverageId =2,Beverage = mockBeverageDAO.Object.Get("Allongé" ),Quantity=1,IngredientId=1, Ingredient = mockIngredientDAO.Object.Get("Café")},
-                new Recipe(){ BeverageId =2,Beverage = mockBeverageDAO.Object.Get("Allongé" ),Quantity=2,IngredientId=5, Ingredient = mockIngredientDAO.Object.Get("Eau")},
-                //Capuccino                            
-                new Recipe(){ BeverageId =3,Beverage = mockBeverageDAO.Object.Get("Capuccino" ),Quantity=1,IngredientId=1, Ingredient = mockIngredientDAO.Object.Get("Café")},
-                new Recipe(){ BeverageId =3,Beverage = mockBeverageDAO.Object.Get("Capuccino" ),Quantity=1,IngredientId=6, Ingredient = mockIngredientDAO.Object.Get("Chocolat")},
-                new Recipe(){ BeverageId =3,Beverage = mockBeverageDAO.Object.Get("Capuccino" ),Quantity=1,IngredientId=5, Ingredient = mockIngredientDAO.Object.Get("Eau")},
-                new Recipe(){ BeverageId =3,Beverage = mockBeverageDAO.Object.Get("Capuccino" ),Quantity=1,IngredientId=3, Ingredient = mockIngredientDAO.Object.Get("Crème")},
-                //Chocolat                            
-                new Recipe(){ BeverageId =4,Beverage = mockBeverageDAO.Object.Get("Chocolat" ),Quantity=3,IngredientId=6, Ingredient = mockIngredientDAO.Object.Get("Chocolat")},
-                new Recipe(){ BeverageId =4,Beverage = mockBeverageDAO.Object.Get("Chocolat" ),Quantity=2,IngredientId=7, Ingredient = mockIngredientDAO.Object.Get("Lait")},
-                new Recipe(){ BeverageId =4,Beverage = mockBeverageDAO.Object.Get("Chocolat" ),Quantity=1,IngredientId=5, Ingredient = mockIngredientDAO.Object.Get("Eau")},
-                new Recipe(){ BeverageId =4,Beverage = mockBeverageDAO.Object.Get("Chocolat" ),Quantity=1,IngredientId=2, Ingredient = mockIngredientDAO.Object.Get("Sucre")},
-                //Thé                                  
-                new Recipe(){ BeverageId =5,Beverage = mockBeverageDAO.Object.Get("Thé" ),Quantity=1,IngredientId=4, Ingredient = mockIngredientDAO.Object.Get("Thé")},
-                new Recipe(){ BeverageId =5,Beverage = mockBeverageDAO.Object.Get("Thé" ),Quantity=2,IngredientId=5, Ingredient = mockIngredientDAO.Object.Get("Eau")}
+                new Recipe(){ Beverage = mockBeverageDAO.Object.Get("Expresso"), Quantity=1, Ingredient = mockIngredientDAO.Object.Get("Café")},
+                new Recipe(){ Beverage = mockBeverageDAO.Object.Get("Expresso"),Quantity=1, Ingredient = mockIngredientDAO.Object.Get("Eau")},
+                //Allongé                
+                new Recipe(){ Beverage = mockBeverageDAO.Object.Get("Allongé" ),Quantity=1, Ingredient = mockIngredientDAO.Object.Get("Café")},
+                new Recipe(){ Beverage = mockBeverageDAO.Object.Get("Allongé" ),Quantity=2, Ingredient = mockIngredientDAO.Object.Get("Eau")},
+                //Capuccino              
+                new Recipe(){ Beverage = mockBeverageDAO.Object.Get("Capuccino" ),Quantity=1, Ingredient = mockIngredientDAO.Object.Get("Café")},
+                new Recipe(){ Beverage = mockBeverageDAO.Object.Get("Capuccino" ),Quantity=1, Ingredient = mockIngredientDAO.Object.Get("Chocolat")},
+                new Recipe(){ Beverage = mockBeverageDAO.Object.Get("Capuccino" ),Quantity=1, Ingredient = mockIngredientDAO.Object.Get("Eau")},
+                new Recipe(){ Beverage = mockBeverageDAO.Object.Get("Capuccino" ),Quantity=1, Ingredient = mockIngredientDAO.Object.Get("Crème")},
+                //Chocolat              
+                new Recipe(){ Beverage = mockBeverageDAO.Object.Get("Chocolat" ),Quantity=3, Ingredient = mockIngredientDAO.Object.Get("Chocolat")},
+                new Recipe(){ Beverage = mockBeverageDAO.Object.Get("Chocolat" ),Quantity=2, Ingredient = mockIngredientDAO.Object.Get("Lait")},
+                new Recipe(){ Beverage = mockBeverageDAO.Object.Get("Chocolat" ),Quantity=1, Ingredient = mockIngredientDAO.Object.Get("Eau")},
+                new Recipe(){ Beverage = mockBeverageDAO.Object.Get("Chocolat" ),Quantity=1, Ingredient = mockIngredientDAO.Object.Get("Sucre")},
+                //Thé                    
+                new Recipe(){ Beverage = mockBeverageDAO.Object.Get("Thé" ),Quantity=1, Ingredient = mockIngredientDAO.Object.Get("Thé")},
+                new Recipe(){ Beverage = mockBeverageDAO.Object.Get("Thé" ),Quantity=2, Ingredient = mockIngredientDAO.Object.Get("Eau")}
             });
             RecipeDomain domain = new RecipeDomain(mockRecipeDAO.Object);
 
