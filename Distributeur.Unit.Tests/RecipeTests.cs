@@ -13,7 +13,8 @@ namespace Distributeur.Unit.Tests
         [InlineData("Capuccino","3,51")]
         [InlineData("Chocolat","5,33")]
         [InlineData("Thé", "3,12")]
-        public void GetPrice_Return_IngredientTimesQuantityPlusMargin(string beverageName,string expectedPrice)
+        //This test check the calculated price of the beverages, i.e. sum of (ingredients' unit price * quantity) + 30% margin
+        public void GetPrice_Return_IngredientUnitPriceTimesQuantityPlusMargin(string beverageName,string expectedPrice)
         {
             //Arrange
             var mockIngredientDAO = new Mock<IIngredientDAO>();
